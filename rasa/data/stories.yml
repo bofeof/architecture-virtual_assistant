@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask architecture
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: affirm
+      - action: utter_ask_more
+
+  - story: ask architecture then microservices
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: ask_microservices
+      - action: utter_microservices
+
+  - story: ask architecture then monolith
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: ask_monolith
+      - action: utter_monolith
+
+  - story: request clarification then ask microservices
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: ask_microservices
+      - action: utter_microservices
+
+  - story: greet and ask microservices directly
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_microservices
+      - action: utter_microservices
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask for more info
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
+
+  - story: ask about monolith
+    steps:
+      - intent: ask_monolith
+      - action: utter_monolith
