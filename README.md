@@ -3,7 +3,7 @@
 ## Ссылка на логи
 ``./Results``
 
-[Логи](./Results/rasa_debug.log)
+[Логи](./Results/rasa_debug.txt)
 
 ![Скрингшот бота](./Results/chat.png)
 
